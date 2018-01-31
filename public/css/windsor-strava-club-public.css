@@ -1,0 +1,21 @@
+#wsc #map{
+	min-height: 600px;
+	width: 100%;
+}
+
+.wsc-label img{
+	border-radius: 100px;
+	overflow: hidden;
+	width: 45px;
+	height: 45px;
+	border: 1px solid #94ADD8;
+}
+.wsc-label img:hover{
+	cursor: pointer;
+}
+.ride-stats img{
+	border-radius: 100px;
+}
+.ride-stats{
+	margin-bottom: 10px;
+}
