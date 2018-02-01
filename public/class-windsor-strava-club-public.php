@@ -76,7 +76,7 @@ class Windsor_Strava_Club_Public {
 			wp_enqueue_script( 'windsor_google_maps', '//maps.google.com/maps/api/js?libraries=geometry&key='. $wsc_options['gmaps_api_key'] , array( 'jquery', $this->plugin_name ), '', false );
 		}
 		wp_enqueue_script( 'windsor_rich_marker', plugin_dir_url( __FILE__ ) . 'js/richmarker-compiled.js', array('windsor_google_maps', 'jquery', $this->plugin_name ), '', false );
-
+		wp_enqueue_script( 'moment_js', plugin_dir_url( __FILE__ ) . 'js/moment-with-locales.min.js', array('windsor_google_maps', 'jquery', $this->plugin_name ), '', false );		
 	}
 
 	/**
@@ -119,7 +119,8 @@ class Windsor_Strava_Club_Public {
 
 			$club = curl_exec($ch);
 			$club = json_decode($club);
-
+			// Add WP locale to attributes
+			$atts['locale'] = get_locale();
 
 			// We'll be sending this array to the client
 			$atts = json_encode($atts);
@@ -140,7 +141,8 @@ class Windsor_Strava_Club_Public {
 			</div>
 			<script>
 				jQuery(document).ready(function($) {
-					WindsorStravaClub.initMap( <?php echo $rides; ?>, <?php echo $atts; ?> );
+					// Use WP locale also
+					WindsorStravaClub.initMap( <?php echo $rides; ?>, <?php echo $atts; ?>);
 				});
 			</script>
 
