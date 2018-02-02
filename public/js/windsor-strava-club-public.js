@@ -1,22 +1,16 @@
 var WindsorStravaClub = {
 
 	initMap:function(resp, atts) {
-
-		var monthNames = [
-		  "January", "February", "March",
-		  "April", "May", "June", "July",
-		  "August", "September", "October",
-		  "November", "December"
-		];
-
-		var date = new Date(resp[0].start_date_local);
-		var day = date.getDate();
-		var month = date.getMonth();
-		var year = date.getFullYear();
-		var date = month + '/' + day  + '/' + year;
+		
+		if (resp.length > 1) {			
+			// Retrieve first activity date
+			var firstActivity = resp.length-1;			
+			// Add i18n
+			moment.locale(atts.locale);
+			var mDate = moment(resp[firstActivity].start_date_local);
+			jQuery('.wsc-date').text(mDate.format("L"));			
+		}		
 		var zoom = parseInt(atts.zoom, 10);
-
-		jQuery('.wsc-date').text(date);
 
 	    // var myLatlng = new google.maps.LatLng(39.7469, -105.2108);
 	    var myLatlng = new google.maps.LatLng(atts.lat, atts.lng);
