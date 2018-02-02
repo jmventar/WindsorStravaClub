@@ -16,7 +16,7 @@
  * Plugin Name:       Windsor Strava Club
  * Plugin URI:        https://windsorup.com/windsor-strava-club-wordpress-plugin/
  * Description:       Displays your Strava Club's rides, stats and awesomeness on your WordPress Site.
- * Version:           1.0.12
+ * Version:           1.0.13
  * Author:            Justin W Hall
  * Author URI:        https://windsorup.com/windsor-strava-club-wordpress-plugin/
  * License:           GPL-2.0+

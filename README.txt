@@ -3,8 +3,8 @@ Contributors: jwind
 Donate link: http://windsorup.com/windsor-strava-club-wordpress-plugin/
 Tags: googlemaps, strava, cycling, biking, running, sports
 Requires at least: 3.0.1
-Tested up to: 4.8.1
-Stable tag: 1.0.12
+Tested up to: 4.9.2
+Stable tag: 1.0.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,10 @@ Visit Windsor Strava Club [FAQ Page](http://windsorup.com/windsor-strava-club-wo
 
 
 == Changelog ==
+
+= 1.0.13 =
+* Date localization - thanks [jmventar](https://github.com/jmventar)
+
 = 1.0.12 =
 * remove menu item
 
